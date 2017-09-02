@@ -8,7 +8,7 @@
   "produces": [
     "application/json"
   ],
-  "host": "api.sesac.com",
+  "host": "127.0.0.1:8080",
   "tags": [
     {
       "name": "Composition",
@@ -978,7 +978,7 @@
           "application/json"
         ],
         "consumes": [
-          "application/json"
+          "application/x-www-form-urlencoded"
         ],
         "parameters": [
           {
