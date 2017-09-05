@@ -15,12 +15,12 @@
       "description": "Operations about Compositions"
     },
     {
-      "name": "recording",
-      "description": "Operations about recordings"
+      "name": "Recording",
+      "description": "Operations about Recordings"
     },
     {
-      "name": "recordings",
-      "description": "Operations about recordings"
+      "name": "Recordings",
+      "description": "Operations about Recordings"
     },
     {
       "name": "publisher",
@@ -341,8 +341,8 @@
     },
     "/V1/composition/{hfa_code}": {
       "get": {
-        "summary": "Composition by HFA code",
-        "description": "Composition by HFA code",
+        "summary": "HFA code",
+        "description": "HFA code",
         "produces": [
           "application/json"
         ],
@@ -362,7 +362,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Composition by HFA code"
+            "description": "HFA code"
           }
         },
         "tags": [
@@ -373,8 +373,8 @@
     },
     "/V1/recording/{isrc}": {
       "get": {
-        "summary": "Recording by ISRC.",
-        "description": "Recording by ISRC.",
+        "summary": "ISRC",
+        "description": "ISRC",
         "produces": [
           "application/json"
         ],
@@ -388,19 +388,19 @@
         ],
         "responses": {
           "200": {
-            "description": "Recording by ISRC."
+            "description": "ISRC"
           }
         },
         "tags": [
-          "recording"
+          "Recording"
         ],
         "operationId": "getV1RecordingIsrc"
       }
     },
     "/V1/recording/{isrc}/usage": {
       "get": {
-        "summary": "Usage of IRSC by UPC",
-        "description": "Usage of IRSC by UPC",
+        "summary": "ISRC - Usage",
+        "description": "ISRC - Usage",
         "produces": [
           "application/json"
         ],
@@ -448,19 +448,19 @@
         ],
         "responses": {
           "200": {
-            "description": "Usage of IRSC by UPC"
+            "description": "ISRC - Usage"
           }
         },
         "tags": [
-          "recording"
+          "Recording"
         ],
         "operationId": "getV1RecordingIsrcUsage"
       }
     },
     "/V1/recordings/possible/search": {
       "post": {
-        "summary": "Recordings search",
-        "description": "Recordings search",
+        "summary": "Possible - Search",
+        "description": "Possible - Search",
         "produces": [
           "application/json"
         ],
@@ -521,11 +521,11 @@
         ],
         "responses": {
           "201": {
-            "description": "Recordings search"
+            "description": "Possible - Search"
           }
         },
         "tags": [
-          "recordings"
+          "Recordings"
         ],
         "operationId": "postV1RecordingsPossibleSearch"
       }
@@ -978,7 +978,7 @@
           "application/json"
         ],
         "consumes": [
-          "application/x-www-form-urlencoded"
+          "multipart/form-data"
         ],
         "parameters": [
           {
