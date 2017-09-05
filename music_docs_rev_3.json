@@ -357,14 +357,14 @@
           {
             "in": "query",
             "name": "token",
-            "description": "LaT2ZlNuG2SbL00hW52782283kJ95t",
+            "description": "4k6sA5Vi8tIsCaRgTtE1S0UyYa3gT1",
             "type": "string",
             "required": true
           },
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "ZR0KIU",
+            "description": "Ex. OQTB87",
             "type": "string",
             "required": true
           }
@@ -391,7 +391,7 @@
           {
             "in": "path",
             "name": "isrc",
-            "description": "33614687",
+            "description": "Ex. 89204054",
             "type": "string",
             "required": true
           }
@@ -418,7 +418,7 @@
           {
             "in": "path",
             "name": "isrc",
-            "description": "33614687",
+            "description": "Ex. 89204054",
             "type": "string",
             "required": true
           },
@@ -556,7 +556,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "4HGWG4",
+            "description": "Ex. 0FZ6CG",
             "type": "string",
             "required": true
           },
@@ -649,7 +649,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "MN4L3I",
+            "description": "Ex. 12EPGU",
             "type": "string",
             "required": true
           },
@@ -965,21 +965,21 @@
           {
             "in": "formData",
             "name": "hfa_code",
-            "description": "D7PRD2",
+            "description": "Ex. GMKRT9",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "account_id",
-            "description": "AHYU0K",
+            "description": "Ex. EGU76U",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "recording_id",
-            "description": 5,
+            "description": "Sound recording ID to request link for",
             "type": "integer",
             "format": "int32",
             "required": true
@@ -1010,7 +1010,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "OO7407",
+            "description": "Ex. KHLXTA",
             "type": "string",
             "required": true
           },
@@ -1328,7 +1328,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "R2XLK0",
+            "description": "Ex. 1Z0I9W",
             "type": "string",
             "required": true
           },
@@ -1557,7 +1557,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "R2XLK0",
+            "description": "Ex. 1Z0I9W",
             "type": "string",
             "required": true
           },
