@@ -15,16 +15,12 @@
       "description": "Operations about compositions"
     },
     {
-      "name": "Composition",
-      "description": "Operations about Compositions"
+      "name": "recording",
+      "description": "Operations about recordings"
     },
     {
-      "name": "Recording",
-      "description": "Operations about Recordings"
-    },
-    {
-      "name": "Recordings",
-      "description": "Operations about Recordings"
+      "name": "recordings",
+      "description": "Operations about recordings"
     },
     {
       "name": "publisher",
@@ -353,7 +349,7 @@
     "/V1/composition/{hfa_code}": {
       "get": {
         "summary": "Composition - HFA_code",
-        "description": "Composition - HFA_code",
+        "description": "Composition for a given HFA code",
         "produces": [
           "application/json"
         ],
@@ -361,14 +357,14 @@
           {
             "in": "query",
             "name": "token",
-            "description": "1pLx2v9xOz9f5rNwO05rHfXvH08wIu",
+            "description": "GyApYoE3CoT42uSlT6Ri8mEiBvQqV7",
             "type": "string",
             "required": true
           },
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "Ex. 9ZCWL0",
+            "description": "Ex. 9ALK7U",
             "type": "string",
             "required": true
           }
@@ -379,7 +375,7 @@
           }
         },
         "tags": [
-          "Composition"
+          "composition"
         ],
         "operationId": "getV1CompositionHfaCode"
       }
@@ -387,7 +383,7 @@
     "/V1/recording/{isrc}": {
       "get": {
         "summary": "Recording - ISRC",
-        "description": "Recording - ISRC",
+        "description": "Recording for a given ISRC",
         "produces": [
           "application/json"
         ],
@@ -406,7 +402,7 @@
           }
         },
         "tags": [
-          "Recording"
+          "recording"
         ],
         "operationId": "getV1RecordingIsrc"
       }
@@ -414,7 +410,7 @@
     "/V1/recording/{isrc}/usage": {
       "get": {
         "summary": "Recording - ISRC/Usage",
-        "description": "Recording - ISRC/Usage",
+        "description": "Usage by UPC of a recording by ISRC",
         "produces": [
           "application/json"
         ],
@@ -468,7 +464,7 @@
           }
         },
         "tags": [
-          "Recording"
+          "recording"
         ],
         "operationId": "getV1RecordingIsrcUsage"
       }
@@ -476,7 +472,7 @@
     "/V1/recordings/possible/search": {
       "post": {
         "summary": "Recordings - Possible/Search",
-        "description": "Recordings - Possible/Search",
+        "description": "Search for possible recordings",
         "produces": [
           "application/json"
         ],
@@ -544,7 +540,7 @@
           }
         },
         "tags": [
-          "Recordings"
+          "recordings"
         ],
         "operationId": "postV1RecordingsPossibleSearch"
       }
@@ -560,7 +556,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. XPM4VA",
+            "description": "Ex. FDDQC4",
             "type": "string",
             "required": true
           },
@@ -653,7 +649,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. ZFK57N",
+            "description": "Ex. L2151W",
             "type": "string",
             "required": true
           },
@@ -969,14 +965,14 @@
           {
             "in": "formData",
             "name": "hfa_code",
-            "description": "Ex. 38BRL9",
+            "description": "Ex. BLKRWD",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. 3FBO05",
+            "description": "Ex. D40432",
             "type": "string",
             "required": true
           },
@@ -1014,7 +1010,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. PZGHCU",
+            "description": "Ex. R89876",
             "type": "string",
             "required": true
           },
@@ -1332,7 +1328,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. F50PZ5",
+            "description": "Ex. LZIHJS",
             "type": "string",
             "required": true
           },
@@ -1561,7 +1557,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. F50PZ5",
+            "description": "Ex. LZIHJS",
             "type": "string",
             "required": true
           },
