@@ -11,6 +11,10 @@
   "host": "api.sesac.com",
   "tags": [
     {
+      "name": "composition",
+      "description": "Operations about compositions"
+    },
+    {
       "name": "Composition",
       "description": "Operations about Compositions"
     },
@@ -38,7 +42,7 @@
   "paths": {
     "/V1/composition/{hfa_code}/recordings/possible": {
       "get": {
-        "summary": "Recordings that possibly match composition with HFA code",
+        "summary": "Composition - Recordings/Possible",
         "description": "Recordings that possibly match composition with HFA code",
         "produces": [
           "application/json"
@@ -89,18 +93,18 @@
         ],
         "responses": {
           "200": {
-            "description": "Recordings that possibly match composition with HFA code"
+            "description": "Composition - Recordings/Possible"
           }
         },
         "tags": [
-          "Composition"
+          "composition"
         ],
         "operationId": "getV1CompositionHfaCodeRecordingsPossible"
       }
     },
     "/V1/composition/{hfa_code}/recordings/possible/search": {
       "post": {
-        "summary": "Possible recordings search by title, artist, album, label, isrc",
+        "summary": "Composition - Recordings/Possible/Search",
         "description": "Possible recordings search by title, artist, album, label, isrc",
         "produces": [
           "application/json"
@@ -172,18 +176,18 @@
         ],
         "responses": {
           "201": {
-            "description": "Possible recordings search by title, artist, album, label, isrc"
+            "description": "Composition - Recordings/Possible/Search"
           }
         },
         "tags": [
-          "Composition"
+          "composition"
         ],
         "operationId": "postV1CompositionHfaCodeRecordingsPossibleSearch"
       }
     },
     "/V1/composition/{hfa_code}/recordings/possible/total": {
       "get": {
-        "summary": "Total possible recordings for given composition",
+        "summary": "Composition - Recordings/Possible/Total",
         "description": "Total possible recordings for given composition",
         "produces": [
           "application/json"
@@ -199,18 +203,18 @@
         ],
         "responses": {
           "200": {
-            "description": "Total possible recordings for given composition"
+            "description": "Composition - Recordings/Possible/Total"
           }
         },
         "tags": [
-          "Composition"
+          "composition"
         ],
         "operationId": "getV1CompositionHfaCodeRecordingsPossibleTotal"
       }
     },
     "/V1/composition/{hfa_code}/recordings": {
       "get": {
-        "summary": "Recordings by HFA code",
+        "summary": "Composition - HFA_code/Recordings",
         "description": "Recordings by HFA code",
         "produces": [
           "application/json"
@@ -261,19 +265,19 @@
         ],
         "responses": {
           "200": {
-            "description": "Recordings by HFA code"
+            "description": "Composition - HFA_code/Recordings"
           }
         },
         "tags": [
-          "Composition"
+          "composition"
         ],
         "operationId": "getV1CompositionHfaCodeRecordings"
       }
     },
     "/V1/composition/{hfa_code}/recordings/search": {
       "post": {
-        "summary": "Recordings search by title, artist, album, label, isrc or upc",
-        "description": "Recordings search by title, artist, album, label, isrc or upc",
+        "summary": "Composition - HFA_code/Recordings/Search",
+        "description": "Search recordings by title, artist, album, label, isrc or upc",
         "produces": [
           "application/json"
         ],
@@ -337,19 +341,19 @@
         ],
         "responses": {
           "201": {
-            "description": "Recordings search by title, artist, album, label, isrc or upc"
+            "description": "Composition - HFA_code/Recordings/Search"
           }
         },
         "tags": [
-          "Composition"
+          "composition"
         ],
         "operationId": "postV1CompositionHfaCodeRecordingsSearch"
       }
     },
     "/V1/composition/{hfa_code}": {
       "get": {
-        "summary": "HFA_code",
-        "description": "HFA_code",
+        "summary": "Composition - HFA_code",
+        "description": "Composition - HFA_code",
         "produces": [
           "application/json"
         ],
@@ -357,21 +361,21 @@
           {
             "in": "query",
             "name": "token",
-            "description": "4k6sA5Vi8tIsCaRgTtE1S0UyYa3gT1",
+            "description": "1pLx2v9xOz9f5rNwO05rHfXvH08wIu",
             "type": "string",
             "required": true
           },
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "Ex. OQTB87",
+            "description": "Ex. 9ZCWL0",
             "type": "string",
             "required": true
           }
         ],
         "responses": {
           "200": {
-            "description": "HFA_code"
+            "description": "Composition - HFA_code"
           }
         },
         "tags": [
@@ -382,8 +386,8 @@
     },
     "/V1/recording/{isrc}": {
       "get": {
-        "summary": "ISRC",
-        "description": "ISRC",
+        "summary": "Recording - ISRC",
+        "description": "Recording - ISRC",
         "produces": [
           "application/json"
         ],
@@ -391,14 +395,14 @@
           {
             "in": "path",
             "name": "isrc",
-            "description": "Ex. 89204054",
+            "description": "The international standard recording code of the recording",
             "type": "string",
             "required": true
           }
         ],
         "responses": {
           "200": {
-            "description": "ISRC"
+            "description": "Recording - ISRC"
           }
         },
         "tags": [
@@ -409,8 +413,8 @@
     },
     "/V1/recording/{isrc}/usage": {
       "get": {
-        "summary": "ISRC - Usage",
-        "description": "ISRC - Usage",
+        "summary": "Recording - ISRC/Usage",
+        "description": "Recording - ISRC/Usage",
         "produces": [
           "application/json"
         ],
@@ -418,7 +422,7 @@
           {
             "in": "path",
             "name": "isrc",
-            "description": "Ex. 89204054",
+            "description": "The international standard recording code of the recording",
             "type": "string",
             "required": true
           },
@@ -460,7 +464,7 @@
         ],
         "responses": {
           "200": {
-            "description": "ISRC - Usage"
+            "description": "Recording - ISRC/Usage"
           }
         },
         "tags": [
@@ -471,8 +475,8 @@
     },
     "/V1/recordings/possible/search": {
       "post": {
-        "summary": "Possible - Search",
-        "description": "Possible - Search",
+        "summary": "Recordings - Possible/Search",
+        "description": "Recordings - Possible/Search",
         "produces": [
           "application/json"
         ],
@@ -536,7 +540,7 @@
         ],
         "responses": {
           "201": {
-            "description": "Possible - Search"
+            "description": "Recordings - Possible/Search"
           }
         },
         "tags": [
@@ -556,7 +560,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. 0FZ6CG",
+            "description": "Ex. XPM4VA",
             "type": "string",
             "required": true
           },
@@ -649,7 +653,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. 12EPGU",
+            "description": "Ex. ZFK57N",
             "type": "string",
             "required": true
           },
@@ -965,14 +969,14 @@
           {
             "in": "formData",
             "name": "hfa_code",
-            "description": "Ex. GMKRT9",
+            "description": "Ex. 38BRL9",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. EGU76U",
+            "description": "Ex. 3FBO05",
             "type": "string",
             "required": true
           },
@@ -1010,7 +1014,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. KHLXTA",
+            "description": "Ex. PZGHCU",
             "type": "string",
             "required": true
           },
@@ -1328,7 +1332,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. 1Z0I9W",
+            "description": "Ex. F50PZ5",
             "type": "string",
             "required": true
           },
@@ -1557,7 +1561,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. 1Z0I9W",
+            "description": "Ex. F50PZ5",
             "type": "string",
             "required": true
           },
