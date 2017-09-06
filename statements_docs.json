@@ -1,0 +1,824 @@
+{
+  "info": {
+    "title": "Sesac API",
+    "description": "API for data and services made available by SESAC - HFA - Rumblefish.",
+    "version": "0.0.1"
+  },
+  "swagger": "2.0",
+  "produces": [
+    "application/json"
+  ],
+  "host": "api.sesac.com",
+  "tags": [
+    {
+      "name": "payments",
+      "description": "Operations about payments"
+    },
+    {
+      "name": "publisher",
+      "description": "Operations about publishers"
+    }
+  ],
+  "paths": {
+    "/V1/payments": {
+      "get": {
+        "summary": "all payments for all publishers",
+        "description": "all payments for all publishers",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "description": "Specify ordering for attributes.",
+            "type": "string",
+            "default": "CHECK_CUT_DATE desc",
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Page offset to fetch.",
+            "type": "integer",
+            "format": "int32",
+            "default": 1,
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "Number of results to return per page.",
+            "type": "integer",
+            "format": "int32",
+            "default": 10,
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pad a number of results.",
+            "type": "integer",
+            "format": "int32",
+            "default": 0,
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "all payments for all publishers"
+          }
+        },
+        "tags": [
+          "payments"
+        ],
+        "operationId": "getV1Payments"
+      }
+    },
+    "/V1/payments/search": {
+      "post": {
+        "summary": "search payment based on terms",
+        "description": "search payment based on terms",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "order",
+            "description": "Specify ordering for attributes.",
+            "type": "string",
+            "default": "CHECK_CUT_DATE desc",
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "page",
+            "description": "Page offset to fetch.",
+            "type": "integer",
+            "format": "int32",
+            "default": 1,
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "per_page",
+            "description": "Number of results to return per page.",
+            "type": "integer",
+            "format": "int32",
+            "default": 10,
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "offset",
+            "description": "Pad a number of results.",
+            "type": "integer",
+            "format": "int32",
+            "default": 0,
+            "required": false
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "search payment based on terms"
+          }
+        },
+        "tags": [
+          "payments"
+        ],
+        "operationId": "postV1PaymentsSearch"
+      }
+    },
+    "/V1/publisher/{account_id}/payments": {
+      "get": {
+        "summary": "Payments for publisher",
+        "description": "Payments for publisher",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "order",
+            "description": "Specify ordering for attributes.",
+            "type": "string",
+            "default": "CHECK_CUT_DATE desc",
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Page offset to fetch.",
+            "type": "integer",
+            "format": "int32",
+            "default": 1,
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "Number of results to return per page.",
+            "type": "integer",
+            "format": "int32",
+            "default": 10,
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "Pad a number of results.",
+            "type": "integer",
+            "format": "int32",
+            "default": 0,
+            "required": false
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Payments for publisher"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "getV1PublisherAccountIdPayments"
+      }
+    },
+    "/V1/publisher/{account_id}/payments/search": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "order",
+            "description": "Specify ordering for attributes.",
+            "type": "string",
+            "default": "CHECK_CUT_DATE desc",
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "page",
+            "description": "Page offset to fetch.",
+            "type": "integer",
+            "format": "int32",
+            "default": 1,
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "per_page",
+            "description": "Number of results to return per page.",
+            "type": "integer",
+            "format": "int32",
+            "default": 10,
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "offset",
+            "description": "Pad a number of results.",
+            "type": "integer",
+            "format": "int32",
+            "default": 0,
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "terms",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "operator",
+            "description": "Logical operator. Ex. OR, AND.",
+            "type": "string",
+            "default": "OR",
+            "enum": [
+              "OR",
+              "AND"
+            ],
+            "required": false
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "created Search"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "postV1PublisherAccountIdPaymentsSearch"
+      }
+    },
+    "/V1/publisher/{account_id}/payment/{check_number}/statement/documents": {
+      "get": {
+        "summary": "Get all files to a statement",
+        "description": "Get all files to a statement",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "check_number",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get all files to a statement"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "getV1PublisherAccountIdPaymentCheckNumberStatementDocuments"
+      },
+      "post": {
+        "summary": "Upload files to payment",
+        "description": "Upload files to payment",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "file",
+            "description": "Uploaded file",
+            "type": "file",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "check_number",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Upload files to payment"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "postV1PublisherAccountIdPaymentCheckNumberStatementDocuments"
+      }
+    },
+    "/V1/publisher/{account_id}/payment/{check_number}/statement/documents/{document_id}": {
+      "delete": {
+        "summary": "delete one file",
+        "description": "delete one file",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "check_number",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "document_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "delete one file"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "deleteV1PublisherAccountIdPaymentCheckNumberStatementDocumentsDocumentId"
+      }
+    },
+    "/V1/publisher/{account_id}/payment/{check_number}/statement/pdf": {
+      "get": {
+        "summary": "Request payment with associated statements PDF report",
+        "description": "Request payment with associated statements PDF report",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "check_number",
+            "description": "Ex. 42178736",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "payments[payee]",
+            "description": "payment payee",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "payments[check_number]",
+            "description": "payment check number",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "destination",
+            "description": "ftp or download",
+            "type": "string",
+            "default": "download",
+            "required": false
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request payment with associated statements PDF report"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "getV1PublisherAccountIdPaymentCheckNumberStatementPdf"
+      }
+    },
+    "/V1/publisher/{account_id}/payment/{check_number}/statement/noi": {
+      "get": {
+        "summary": "It generates noi PDF",
+        "description": "It generates noi PDF",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "check_number",
+            "description": "Ex. 42178736",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "It generates noi PDF"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "getV1PublisherAccountIdPaymentCheckNumberStatementNoi"
+      }
+    },
+    "/V1/publisher/{account_id}/payment/{check_number}/statement/summary": {
+      "get": {
+        "summary": "Retrieve summary statement",
+        "description": "Retrieve summary statement",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "check_number",
+            "description": "Ex. 42178736",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "file_format",
+            "description": "File format. Ex. csv, txt, poli+, m3, pdf.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "payments[payee]",
+            "description": "payment payee",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "payments[check_number]",
+            "description": "payment check number",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "destination",
+            "description": "ftp or download",
+            "type": "string",
+            "default": "download",
+            "required": false
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieve summary statement"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "getV1PublisherAccountIdPaymentCheckNumberStatementSummary"
+      }
+    },
+    "/V1/publisher/{account_id}/payment/{check_number}/statement/full": {
+      "get": {
+        "summary": "Retrieve full statement",
+        "description": "Retrieve full statement",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "check_number",
+            "description": "Ex. 42178736",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "file_format",
+            "description": "File format. Ex. csv, txt, poli+, m3, pdf.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "payments[payee]",
+            "description": "payment payee",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "payments[check_number]",
+            "description": "payment check number",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "destination",
+            "description": "ftp or download",
+            "type": "string",
+            "default": "download",
+            "required": false
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieve full statement"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "getV1PublisherAccountIdPaymentCheckNumberStatementFull"
+      }
+    },
+    "/V1/publisher/{account_id}/payment_batch/statement/pdf": {
+      "get": {
+        "summary": "Request payments with associated statements PDF reports",
+        "description": "Request payments with associated statements PDF reports",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "payments[payee]",
+            "description": "payment payee",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "payments[check_number]",
+            "description": "payment check number",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "destination",
+            "description": "ftp or download",
+            "type": "string",
+            "default": "download",
+            "required": false
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request payments with associated statements PDF reports"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "getV1PublisherAccountIdPaymentBatchStatementPdf"
+      }
+    },
+    "/V1/publisher/{account_id}/payment_batch/statement/summary": {
+      "get": {
+        "summary": "Retrieve multiple summary statements",
+        "description": "Retrieve multiple summary statements",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "payments[payee]",
+            "description": "payment payee",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "payments[check_number]",
+            "description": "payment check number",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "destination",
+            "description": "ftp or download",
+            "type": "string",
+            "default": "download",
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "file_format",
+            "description": "File format. Ex. csv, txt, poli+, m3, pdf.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieve multiple summary statements"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "getV1PublisherAccountIdPaymentBatchStatementSummary"
+      }
+    },
+    "/V1/publisher/{account_id}/payment_batch/statement/full": {
+      "get": {
+        "summary": "Retrieve multiple full statements",
+        "description": "Retrieve multiple full statements",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "payments[payee]",
+            "description": "payment payee",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "payments[check_number]",
+            "description": "payment check number",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "destination",
+            "description": "ftp or download",
+            "type": "string",
+            "default": "download",
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "file_format",
+            "description": "File format. Ex. csv, txt, poli+, m3, pdf.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "account_id",
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieve multiple full statements"
+          }
+        },
+        "tags": [
+          "publisher"
+        ],
+        "operationId": "getV1PublisherAccountIdPaymentBatchStatementFull"
+      }
+    }
+  }
+}
