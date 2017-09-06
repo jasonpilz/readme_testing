@@ -45,6 +45,13 @@
         ],
         "parameters": [
           {
+            "in": "path",
+            "name": "hfa_code",
+            "description": "Harry Fox Agency's unique identification code for a song",
+            "type": "string",
+            "required": true
+          },
+          {
             "in": "query",
             "name": "order",
             "description": "hfa_code asc",
@@ -78,13 +85,6 @@
             "format": "int32",
             "default": 0,
             "required": false
-          },
-          {
-            "in": "path",
-            "name": "hfa_code",
-            "type": "integer",
-            "format": "int32",
-            "required": true
           }
         ],
         "responses": {
@@ -217,6 +217,13 @@
         ],
         "parameters": [
           {
+            "in": "path",
+            "name": "hfa_code",
+            "description": "Harry Fox Agency's unique identification code for a song",
+            "type": "string",
+            "required": true
+          },
+          {
             "in": "query",
             "name": "order",
             "description": "hfa_code asc",
@@ -250,13 +257,6 @@
             "format": "int32",
             "default": 0,
             "required": false
-          },
-          {
-            "in": "path",
-            "name": "hfa_code",
-            "type": "integer",
-            "format": "int32",
-            "required": true
           }
         ],
         "responses": {
@@ -357,14 +357,14 @@
           {
             "in": "query",
             "name": "token",
-            "description": "GyApYoE3CoT42uSlT6Ri8mEiBvQqV7",
+            "description": "The API authentication token for a user",
             "type": "string",
             "required": true
           },
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "Ex. 9ALK7U",
+            "description": "Harry Fox Agency's unique identification code for a song",
             "type": "string",
             "required": true
           }
@@ -482,6 +482,13 @@
         "parameters": [
           {
             "in": "formData",
+            "name": "hfa_code",
+            "description": "Harry Fox Agency's unique identification code for a song",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
             "name": "order",
             "description": "hfa_code asc",
             "type": "string",
@@ -556,7 +563,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. FDDQC4",
+            "description": "Ex. FHJX5F",
             "type": "string",
             "required": true
           },
@@ -649,7 +656,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. L2151W",
+            "description": "Ex. JDMURY",
             "type": "string",
             "required": true
           },
@@ -965,14 +972,14 @@
           {
             "in": "formData",
             "name": "hfa_code",
-            "description": "Ex. BLKRWD",
+            "description": "Harry Fox Agency's unique identification code for a song",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. D40432",
+            "description": "Ex. 5TL94W",
             "type": "string",
             "required": true
           },
@@ -1010,7 +1017,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. R89876",
+            "description": "Ex. JXUMKD",
             "type": "string",
             "required": true
           },
@@ -1328,7 +1335,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. LZIHJS",
+            "description": "Ex. KYDYS2",
             "type": "string",
             "required": true
           },
@@ -1557,7 +1564,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. LZIHJS",
+            "description": "Ex. KYDYS2",
             "type": "string",
             "required": true
           },
