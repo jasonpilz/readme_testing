@@ -1,7 +1,7 @@
 {
   "info": {
-    "title": "Sesac API",
-    "description": "API for data and services made available by SESAC - HFA - Rumblefish.",
+    "title": "Sesac API - Music",
+    "description": "API exposing resources for compositions, recordings, publishers, requests",
     "version": "0.0.1"
   },
   "swagger": "2.0",
@@ -603,16 +603,23 @@
     },
     "/V1/publisher/{account_id}/composition/{hfa_code}/requests": {
       "get": {
-        "summary": "return all requests for a given composition by HFA code",
-        "description": "return all requests for a given composition by HFA code",
+        "summary": "Publisher - Composition/Requests",
+        "description": "All requests for a given composition by HFA Code",
         "produces": [
           "application/json"
         ],
         "parameters": [
           {
+            "in": "query",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
+          {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. 1CUXX9",
+            "description": "Ex. TWU07L",
             "type": "string",
             "required": true
           },
@@ -634,7 +641,7 @@
         ],
         "responses": {
           "200": {
-            "description": "return all requests for a given composition by HFA code"
+            "description": "Publisher - Composition/Requests"
           }
         },
         "tags": [
@@ -645,12 +652,19 @@
     },
     "/V1/publisher/{account_id}/composition/{hfa_code}/requests/{request_status}": {
       "get": {
-        "summary": "return all requests with specified status",
-        "description": "return all requests with specified status",
+        "summary": "Publisher - Composition/Requests/Status",
+        "description": "All requests by status",
         "produces": [
           "application/json"
         ],
         "parameters": [
+          {
+            "in": "query",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
           {
             "in": "path",
             "name": "request_status",
@@ -677,7 +691,7 @@
         ],
         "responses": {
           "200": {
-            "description": "return all requests with specified status"
+            "description": "Publisher - Composition/Requests/Status"
           }
         },
         "tags": [
@@ -688,12 +702,19 @@
     },
     "/V1/publisher/{account_id}/compositions": {
       "get": {
-        "summary": "Compositions user has access to by account.",
-        "description": "Compositions user has access to by account.",
+        "summary": "Publisher - Compositions",
+        "description": "Compositions user has access to by account",
         "produces": [
           "application/json"
         ],
         "parameters": [
+          {
+            "in": "query",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
           {
             "in": "query",
             "name": "order",
@@ -705,7 +726,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. 09QS37",
+            "description": "Ex. EWH1XB",
             "type": "string",
             "required": true
           },
@@ -739,7 +760,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Compositions user has access to by account."
+            "description": "Publisher - Compositions"
           }
         },
         "tags": [
@@ -750,8 +771,8 @@
     },
     "/V1/publisher/{account_id}/compositions/search": {
       "post": {
-        "summary": "Composition search by title, writers, or pub_name.",
-        "description": "Composition search by title, writers, or pub_name.",
+        "summary": "Publisher - Compositions/Search",
+        "description": "Compositions search by account",
         "produces": [
           "application/json"
         ],
@@ -759,6 +780,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "in": "formData",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
           {
             "in": "formData",
             "name": "terms",
@@ -815,7 +843,7 @@
         ],
         "responses": {
           "201": {
-            "description": "Composition search by title, writers, or pub_name."
+            "description": "Publisher - Compositions/Search"
           }
         },
         "tags": [
@@ -826,7 +854,7 @@
     },
     "/V1/publisher/{account_id}/requests/my": {
       "get": {
-        "summary": "My compositions with request counts by type",
+        "summary": "Publisher - Requests/My",
         "description": "My compositions with request counts by type",
         "produces": [
           "application/json"
@@ -869,7 +897,7 @@
         ],
         "responses": {
           "200": {
-            "description": "My compositions with request counts by type"
+            "description": "Publisher - Requests/My"
           }
         },
         "tags": [
@@ -880,7 +908,7 @@
     },
     "/V1/publisher/{account_id}/requests/copub": {
       "get": {
-        "summary": "Co-publisher compositions with request counts by type",
+        "summary": "Publisher - Requests/Copub",
         "description": "Co-publisher compositions with request counts by type",
         "produces": [
           "application/json"
@@ -923,7 +951,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Co-publisher compositions with request counts by type"
+            "description": "Publisher - Requests/Copub"
           }
         },
         "tags": [
@@ -934,8 +962,8 @@
     },
     "/V1/publisher/{account_id}/requests/search": {
       "post": {
-        "summary": "Request search.",
-        "description": "Request search.",
+        "summary": "Publisher - Requests/Search",
+        "description": "Request search by account",
         "produces": [
           "application/json"
         ],
@@ -972,6 +1000,13 @@
           },
           {
             "in": "formData",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
             "name": "terms",
             "type": "string",
             "required": true
@@ -998,7 +1033,7 @@
         ],
         "responses": {
           "201": {
-            "description": "Request search."
+            "description": "Publisher - Requests/Search"
           }
         },
         "tags": [
@@ -1009,8 +1044,8 @@
     },
     "/V1/request": {
       "post": {
-        "summary": "Create a new request",
-        "description": "Create a new request",
+        "summary": "Request - New",
+        "description": "Create a new link request",
         "produces": [
           "application/json"
         ],
@@ -1028,7 +1063,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. UTW6EO",
+            "description": "Ex. FRGI1K",
             "type": "string",
             "required": true
           },
@@ -1043,7 +1078,7 @@
         ],
         "responses": {
           "201": {
-            "description": "Create a new request"
+            "description": "Request - New"
           }
         },
         "tags": [
@@ -1054,8 +1089,8 @@
     },
     "/V1/request/batch": {
       "post": {
-        "summary": "Create a new batch request",
-        "description": "Create a new batch request",
+        "summary": "Request - Batch",
+        "description": "Request - Batch",
         "produces": [
           "application/json"
         ],
@@ -1066,7 +1101,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. K3C7A4",
+            "description": "Ex. Z4RT82",
             "type": "string",
             "required": true
           },
@@ -1080,7 +1115,7 @@
         ],
         "responses": {
           "201": {
-            "description": "Create a new batch request"
+            "description": "Request - Batch"
           }
         },
         "tags": [
@@ -1091,7 +1126,7 @@
     },
     "/V1/requests": {
       "put": {
-        "summary": "Update request[s]: accept or reject",
+        "summary": "Requests",
         "description": "Update request[s]: accept or reject",
         "produces": [
           "application/json"
@@ -1126,7 +1161,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Update request[s]: accept or reject"
+            "description": "Requests"
           }
         },
         "tags": [
@@ -1137,8 +1172,8 @@
     },
     "/V1/requests/all": {
       "get": {
-        "summary": "return all requests for an admin",
-        "description": "return all requests for an admin",
+        "summary": "Requests - All",
+        "description": "Return all requests for an admin",
         "produces": [
           "application/json"
         ],
@@ -1181,7 +1216,7 @@
         ],
         "responses": {
           "200": {
-            "description": "return all requests for an admin"
+            "description": "Requests - All"
           }
         },
         "tags": [
@@ -1192,8 +1227,8 @@
     },
     "/V1/requests/all/{request_status}": {
       "get": {
-        "summary": "return all requests with specified status",
-        "description": "return all requests with specified status",
+        "summary": "Requests - All/Status",
+        "description": "Return all requests with specified status",
         "produces": [
           "application/json"
         ],
@@ -1245,7 +1280,7 @@
         ],
         "responses": {
           "200": {
-            "description": "return all requests with specified status"
+            "description": "Requests - All/Status"
           }
         },
         "tags": [
@@ -1256,8 +1291,8 @@
     },
     "/V1/requests/blocked": {
       "get": {
-        "summary": "requests with blocked isrcs",
-        "description": "requests with blocked isrcs",
+        "summary": "Requests - Blocked",
+        "description": "Requests with blocked isrcs",
         "produces": [
           "application/json"
         ],
@@ -1300,7 +1335,7 @@
         ],
         "responses": {
           "200": {
-            "description": "requests with blocked isrcs"
+            "description": "Requests - Blocked"
           }
         },
         "tags": [
@@ -1311,7 +1346,7 @@
     },
     "/V1/requests/blocked/{request_status}": {
       "get": {
-        "summary": "requests with blocked isrcs with specified status",
+        "summary": "Requests - Blocked/Status",
         "description": "requests with blocked isrcs with specified status",
         "produces": [
           "application/json"
@@ -1364,7 +1399,7 @@
         ],
         "responses": {
           "200": {
-            "description": "requests with blocked isrcs with specified status"
+            "description": "Requests - Blocked/Status"
           }
         },
         "tags": [
@@ -1375,7 +1410,7 @@
     },
     "/V1/requests/publisher/{account_id}": {
       "get": {
-        "summary": "return all requests for an admin for an account_id",
+        "summary": "Requests - Publisher",
         "description": "return all requests for an admin for an account_id",
         "produces": [
           "application/json"
@@ -1384,7 +1419,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. PJ2MFZ",
+            "description": "Ex. 5SYWCD",
             "type": "string",
             "required": true
           },
@@ -1426,7 +1461,7 @@
         ],
         "responses": {
           "200": {
-            "description": "return all requests for an admin for an account_id"
+            "description": "Requests - Publisher"
           }
         },
         "tags": [
@@ -1524,8 +1559,8 @@
     },
     "/V1/requests/publisher/{account_id}/compositions": {
       "get": {
-        "summary": "compositions for a given publisher",
-        "description": "compositions for a given publisher",
+        "summary": "Requests - Publisher/Compositions",
+        "description": "Compositions for a given publisher",
         "produces": [
           "application/json"
         ],
@@ -1593,7 +1628,7 @@
         ],
         "responses": {
           "200": {
-            "description": "compositions for a given publisher"
+            "description": "Requests - Publisher/Compositions"
           }
         },
         "tags": [
@@ -1604,7 +1639,7 @@
     },
     "/V1/requests/publisher/{account_id}/{request_status}": {
       "get": {
-        "summary": "return request[s]: for an account_id according to the status",
+        "summary": "Requests - Publisher/Status",
         "description": "return request[s]: for an account_id according to the status",
         "produces": [
           "application/json"
@@ -1613,7 +1648,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. PJ2MFZ",
+            "description": "Ex. 5SYWCD",
             "type": "string",
             "required": true
           },
@@ -1664,7 +1699,7 @@
         ],
         "responses": {
           "200": {
-            "description": "return request[s]: for an account_id according to the status"
+            "description": "Requests - Publisher/Status"
           }
         },
         "tags": [
