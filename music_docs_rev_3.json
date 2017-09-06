@@ -210,7 +210,7 @@
     },
     "/V1/composition/{hfa_code}/recordings": {
       "get": {
-        "summary": "Composition - HFA_code/Recordings",
+        "summary": "Composition - HFA_Code/Recordings",
         "description": "Recordings by HFA code",
         "produces": [
           "application/json"
@@ -261,7 +261,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Composition - HFA_code/Recordings"
+            "description": "Composition - HFA_Code/Recordings"
           }
         },
         "tags": [
@@ -272,7 +272,7 @@
     },
     "/V1/composition/{hfa_code}/recordings/search": {
       "post": {
-        "summary": "Composition - HFA_code/Recordings/Search",
+        "summary": "Composition - HFA_Code/Recordings/Search",
         "description": "Search recordings by title, artist, album, label, isrc or upc",
         "produces": [
           "application/json"
@@ -337,7 +337,7 @@
         ],
         "responses": {
           "201": {
-            "description": "Composition - HFA_code/Recordings/Search"
+            "description": "Composition - HFA_Code/Recordings/Search"
           }
         },
         "tags": [
@@ -348,7 +348,7 @@
     },
     "/V1/composition/{hfa_code}": {
       "get": {
-        "summary": "Composition - HFA_code",
+        "summary": "Composition - HFA_Code",
         "description": "Composition for a given HFA code",
         "produces": [
           "application/json"
@@ -371,7 +371,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Composition - HFA_code"
+            "description": "Composition - HFA_Code"
           }
         },
         "tags": [
@@ -556,7 +556,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. 752ZVK",
+            "description": "Ex. IFIOUW",
             "type": "string",
             "required": true
           },
@@ -649,7 +649,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. GEZEU9",
+            "description": "Ex. L7HIXY",
             "type": "string",
             "required": true
           },
@@ -972,7 +972,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. VSIYOE",
+            "description": "Ex. UONL7C",
             "type": "string",
             "required": true
           },
@@ -1010,7 +1010,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. 3AUTRL",
+            "description": "Ex. YOS3NJ",
             "type": "string",
             "required": true
           },
@@ -1328,7 +1328,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. DB8YYW",
+            "description": "Ex. JIQFUC",
             "type": "string",
             "required": true
           },
@@ -1557,7 +1557,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. DB8YYW",
+            "description": "Ex. JIQFUC",
             "type": "string",
             "required": true
           },
