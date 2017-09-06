@@ -45,6 +45,13 @@
         ],
         "parameters": [
           {
+            "in": "query",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
+          {
             "in": "path",
             "name": "hfa_code",
             "description": "Harry fox agency unique identification code for a song.",
@@ -109,6 +116,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "in": "formData",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
           {
             "in": "formData",
             "name": "order",
@@ -190,6 +204,13 @@
         ],
         "parameters": [
           {
+            "in": "query",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
+          {
             "in": "path",
             "name": "hfa_code",
             "description": "Harry fox agency unique identification code for a song.",
@@ -216,6 +237,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "in": "query",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
           {
             "in": "path",
             "name": "hfa_code",
@@ -281,6 +309,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "in": "formData",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
           {
             "in": "path",
             "name": "hfa_code",
@@ -389,6 +424,13 @@
         ],
         "parameters": [
           {
+            "in": "query",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
+          {
             "in": "path",
             "name": "isrc",
             "description": "The international standard recording code of the recording.",
@@ -415,6 +457,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "in": "query",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
           {
             "in": "path",
             "name": "isrc",
@@ -480,6 +529,13 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "in": "formData",
+            "name": "token",
+            "description": "The authentication token for a user.",
+            "type": "string",
+            "required": true
+          },
           {
             "in": "formData",
             "name": "order",
@@ -556,7 +612,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. IFIOUW",
+            "description": "Ex. 1CUXX9",
             "type": "string",
             "required": true
           },
@@ -649,7 +705,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. L7HIXY",
+            "description": "Ex. 09QS37",
             "type": "string",
             "required": true
           },
@@ -972,7 +1028,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. UONL7C",
+            "description": "Ex. UTW6EO",
             "type": "string",
             "required": true
           },
@@ -1010,7 +1066,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. YOS3NJ",
+            "description": "Ex. K3C7A4",
             "type": "string",
             "required": true
           },
@@ -1328,7 +1384,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. JIQFUC",
+            "description": "Ex. PJ2MFZ",
             "type": "string",
             "required": true
           },
@@ -1557,7 +1613,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. JIQFUC",
+            "description": "Ex. PJ2MFZ",
             "type": "string",
             "required": true
           },
