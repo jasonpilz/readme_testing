@@ -39,7 +39,7 @@
     "/V1/composition/{hfa_code}/recordings/possible": {
       "get": {
         "summary": "Composition - Recordings/Possible",
-        "description": "Recordings that possibly match composition with HFA code",
+        "description": "Recordings that are possible matches for a composition by HFA code",
         "produces": [
           "application/json"
         ],
@@ -47,14 +47,14 @@
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "Harry Fox Agency's unique identification code for a song",
+            "description": "Harry fox agency unique identification code for a song.",
             "type": "string",
             "required": true
           },
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "play_count desc, title asc, artist asc",
             "required": false
@@ -112,28 +112,28 @@
           {
             "in": "formData",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "required": false
           },
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "Harry Fox Agency's unique identification code for a song",
+            "description": "Harry fox agency unique identification code for a song.",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "terms",
-            "description": "title, artist, album, label, isrc or upc",
+            "description": "Allowed search terms. Ex. title, artist, album, label, isrc, upc.",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "operator",
-            "description": "OR or AND",
+            "description": "Logical operator. Ex. OR, AND.",
             "type": "string",
             "default": "OR",
             "enum": [
@@ -192,7 +192,7 @@
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "Harry Fox Agency's unique identification code for a song",
+            "description": "Harry fox agency unique identification code for a song.",
             "type": "string",
             "required": true
           }
@@ -219,14 +219,14 @@
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "Harry Fox Agency's unique identification code for a song",
+            "description": "Harry fox agency unique identification code for a song.",
             "type": "string",
             "required": true
           },
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "play_count desc, title asc, artist asc",
             "required": false
@@ -284,21 +284,21 @@
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "Harry Fox Agency's unique identification code for a song",
+            "description": "Harry fox agency unique identification code for a song.",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "terms",
-            "description": "title, artist, album, label, isrc or upc",
+            "description": "Allowed search terms. Ex. title, artist, album, label, isrc, upc.",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "operator",
-            "description": "OR or AND",
+            "description": "Logical operator. Ex. OR, AND.",
             "type": "string",
             "default": "OR",
             "enum": [
@@ -357,14 +357,14 @@
           {
             "in": "query",
             "name": "token",
-            "description": "The API authentication token for a user",
+            "description": "The authentication token for a user.",
             "type": "string",
             "required": true
           },
           {
             "in": "path",
             "name": "hfa_code",
-            "description": "Harry Fox Agency's unique identification code for a song",
+            "description": "Harry fox agency unique identification code for a song.",
             "type": "string",
             "required": true
           }
@@ -391,7 +391,7 @@
           {
             "in": "path",
             "name": "isrc",
-            "description": "The international standard recording code of the recording",
+            "description": "The international standard recording code of the recording.",
             "type": "string",
             "required": true
           }
@@ -418,14 +418,14 @@
           {
             "in": "path",
             "name": "isrc",
-            "description": "The international standard recording code of the recording",
+            "description": "The international standard recording code of the recording.",
             "type": "string",
             "required": true
           },
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "isrc",
             "required": false
@@ -483,21 +483,21 @@
           {
             "in": "formData",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "required": false
           },
           {
             "in": "formData",
             "name": "terms",
-            "description": "title, artist, album, label, isrc or upc",
+            "description": "Allowed search terms. Ex. title, artist, album, label, isrc, upc.",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "operator",
-            "description": "OR or AND",
+            "description": "Logical operator. Ex. OR, AND.",
             "type": "string",
             "default": "OR",
             "enum": [
@@ -556,14 +556,14 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. UGWC2C",
+            "description": "Ex. 752ZVK",
             "type": "string",
             "required": true
           },
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "play_count desc, track_title asc",
             "required": false
@@ -598,7 +598,7 @@
           {
             "in": "path",
             "name": "request_status",
-            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined",
+            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined.",
             "type": "integer",
             "format": "int32",
             "default": 1,
@@ -641,7 +641,7 @@
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "possible_recording_count desc, hfa_code asc",
             "required": false
@@ -649,7 +649,7 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. RM8XDH",
+            "description": "Ex. GEZEU9",
             "type": "string",
             "required": true
           },
@@ -706,14 +706,14 @@
           {
             "in": "formData",
             "name": "terms",
-            "description": "title, writers or pub_name",
+            "description": "Allowed search terms. Ex. title, writers, pub_name.",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "operator",
-            "description": "OR or AND",
+            "description": "Logical operator. Ex. OR, AND.",
             "type": "string",
             "default": "OR",
             "enum": [
@@ -923,7 +923,7 @@
           {
             "in": "formData",
             "name": "operator",
-            "description": "OR or AND",
+            "description": "Logical operator. Ex. OR, AND.",
             "type": "string",
             "default": "OR",
             "enum": [
@@ -965,21 +965,21 @@
           {
             "in": "formData",
             "name": "hfa_code",
-            "description": "Harry Fox Agency's unique identification code for a song",
+            "description": "Harry fox agency unique identification code for a song.",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. AB0NCE",
+            "description": "Ex. VSIYOE",
             "type": "string",
             "required": true
           },
           {
             "in": "formData",
             "name": "recording_id",
-            "description": "Sound recording ID to request link for",
+            "description": "Sound recording id to request link for.",
             "type": "integer",
             "format": "int32",
             "required": true
@@ -1010,7 +1010,7 @@
           {
             "in": "formData",
             "name": "account_id",
-            "description": "Ex. YT8TPV",
+            "description": "Ex. 3AUTRL",
             "type": "string",
             "required": true
           },
@@ -1047,7 +1047,7 @@
           {
             "in": "formData",
             "name": "request_ids[request_status]",
-            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined",
+            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined.",
             "type": "array",
             "items": {
               "type": "integer",
@@ -1090,7 +1090,7 @@
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "updated_at desc",
             "required": false
@@ -1145,7 +1145,7 @@
           {
             "in": "path",
             "name": "request_status",
-            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined",
+            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined.",
             "type": "integer",
             "format": "int32",
             "default": 1,
@@ -1154,7 +1154,7 @@
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "updated_at desc",
             "required": false
@@ -1209,7 +1209,7 @@
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "updated_at desc",
             "required": false
@@ -1264,7 +1264,7 @@
           {
             "in": "path",
             "name": "request_status",
-            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined",
+            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined.",
             "type": "integer",
             "format": "int32",
             "default": 1,
@@ -1273,7 +1273,7 @@
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "updated_at desc",
             "required": false
@@ -1328,14 +1328,14 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. AKTSBY",
+            "description": "Ex. DB8YYW",
             "type": "string",
             "required": true
           },
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "updated_at desc",
             "required": false
@@ -1390,7 +1390,7 @@
           {
             "in": "query",
             "name": "request_type",
-            "description": "Link or Unlink",
+            "description": "Link or Unlink.",
             "type": "integer",
             "format": "int32",
             "default": 1,
@@ -1399,7 +1399,7 @@
           {
             "in": "query",
             "name": "request_status",
-            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined",
+            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined.",
             "type": "integer",
             "format": "int32",
             "default": 1,
@@ -1408,7 +1408,7 @@
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "play_count desc",
             "required": false
@@ -1477,7 +1477,7 @@
           {
             "in": "query",
             "name": "request_type",
-            "description": "Link or Unlink",
+            "description": "Link or Unlink.",
             "type": "integer",
             "format": "int32",
             "default": 1,
@@ -1486,7 +1486,7 @@
           {
             "in": "query",
             "name": "request_status",
-            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined",
+            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined.",
             "type": "integer",
             "format": "int32",
             "default": 1,
@@ -1495,7 +1495,7 @@
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "song_title",
             "required": false
@@ -1557,14 +1557,14 @@
           {
             "in": "path",
             "name": "account_id",
-            "description": "Ex. AKTSBY",
+            "description": "Ex. DB8YYW",
             "type": "string",
             "required": true
           },
           {
             "in": "path",
             "name": "request_status",
-            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined",
+            "description": "1, 2, 3, pending, Pending, approved, Approved, declined, or Declined.",
             "type": "integer",
             "format": "int32",
             "default": 1,
@@ -1573,7 +1573,7 @@
           {
             "in": "query",
             "name": "order",
-            "description": "hfa_code asc",
+            "description": "Specify ordering for attributes.",
             "type": "string",
             "default": "updated_at desc",
             "required": false
